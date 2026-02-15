@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,32 +10,83 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
-        body { background-color: #020617; color: #f8fafc; font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .gradient-text { background: linear-gradient(90deg, #60a5fa, #a855f7); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
-        
+
+        body {
+            background-color: #020617;
+            color: #f8fafc;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #60a5fa, #a855f7);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
         /* TIMER UI - FIXED CONTRAST */
-        #timerContainer { background: #ffffff; color: #020617; box-shadow: 0 10px 40px rgba(0,0,0,0.8); border: 3px solid #3b82f6; z-index: 1000; }
-        @keyframes flicker { 0%, 100% { background-color: #ffffff; } 50% { background-color: #fca5a5; } }
-        .timer-warning { animation: flicker 1s infinite; border: 3px solid #ef4444 !important; color: #b91c1c !important; }
-        .timer-stop { background-color: #991b1b !important; color: #ffffff !important; border: 3px solid #f87171 !important; animation: none; }
+        #timerContainer {
+            background: #ffffff;
+            color: #020617;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+            border: 3px solid #3b82f6;
+            z-index: 1000;
+        }
+
+        @keyframes flicker {
+
+            0%,
+            100% {
+                background-color: #ffffff;
+            }
+
+            50% {
+                background-color: #fca5a5;
+            }
+        }
+
+        .timer-warning {
+            animation: flicker 1s infinite;
+            border: 3px solid #ef4444 !important;
+            color: #b91c1c !important;
+        }
+
+        .timer-stop {
+            background-color: #991b1b !important;
+            color: #ffffff !important;
+            border: 3px solid #f87171 !important;
+            animation: none;
+        }
     </style>
 </head>
+
 <body onload="startTimer()">
 
-    <div id="timerContainer" class="fixed bottom-10 right-10 px-8 py-4 rounded-3xl flex items-center gap-4 transition-all">
+    <div id="timerContainer"
+        class="fixed bottom-10 right-10 px-8 py-4 rounded-3xl flex items-center gap-4 transition-all">
         <i class="fas fa-hourglass-start text-blue-600 text-2xl" id="timerIcon"></i>
         <span id="displayTime" class="text-4xl font-black font-mono tracking-tighter">00:00</span>
     </div>
 
     <nav class="fixed w-full z-50 glass border-b border-slate-800/50 px-8 py-4 flex justify-between items-center">
         <div class="flex items-center gap-4">
-            <div class="bg-white p-1 rounded flex items-center justify-center shadow-md" style="height: 48px; width: 48px;">
-                <img src="mujlogo.jpg" alt="MUJ" class="h-full w-auto object-contain" onerror="this.src='https://via.placeholder.com/50?text=MUJ'">
+            <div class="bg-white p-1 rounded flex items-center justify-center shadow-md"
+                style="height: 48px; width: 48px;">
+                <img src="mujlogo.jpg" alt="MUJ" class="h-full w-auto object-contain"
+                    onerror="this.src='https://via.placeholder.com/50?text=MUJ'">
             </div>
             <div class="flex flex-col text-left">
-                <span class="text-xl font-black text-white leading-none uppercase tracking-tighter">PBL <span class="text-blue-500 italic">2026</span></span>
-                <span class="text-[9px] text-slate-400 font-bold uppercase tracking-widest mt-1">Dept. of Computer Science & Engineering</span>
+                <span class="text-xl font-black text-white leading-none uppercase tracking-tighter">PBL <span
+                        class="text-blue-500 italic">2026</span></span>
+                <span class="text-[9px] text-slate-400 font-bold uppercase tracking-widest mt-1">Dept. of Computer
+                    Science & Engineering</span>
             </div>
         </div>
         <div class="hidden md:flex gap-8 text-[11px] uppercase tracking-widest font-bold opacity-70">
@@ -46,12 +98,18 @@
     </nav>
 
     <main class="max-w-6xl mx-auto px-6 pt-48 pb-32 space-y-32">
-        
+
         <section class="text-center">
-            <div class="inline-block px-4 py-1 border border-slate-800 rounded-full text-slate-500 text-[10px] font-mono mb-6 uppercase tracking-widest">ID: 23FE10CSE00422</div>
-            <h1 class="text-6xl md:text-7xl font-extrabold mb-8 uppercase leading-tight"><span class="gradient-text uppercase">AI-Driven Research Engine</span><br><span class="text-3xl text-white">for Commercial Courts</span></h1>
-            <p class="text-slate-400 max-w-2xl mx-auto italic text-lg leading-relaxed border-l-2 border-blue-500/30 pl-6 text-left">
-                "An intelligent legal research assistant powered by Claude Opus 4.5 that helps lawyers, judges, and legal professionals quickly search and analyze commercial court cases."
+            <div
+                class="inline-block px-4 py-1 border border-slate-800 rounded-full text-slate-500 text-[10px] font-mono mb-6 uppercase tracking-widest">
+                ID: 23FE10CSE00422</div>
+            <h1 class="text-6xl md:text-7xl font-extrabold mb-8 uppercase leading-tight"><span
+                    class="gradient-text uppercase">AI-Driven Research Engine</span><br><span
+                    class="text-3xl text-white">for Commercial Courts</span></h1>
+            <p
+                class="text-slate-400 max-w-2xl mx-auto italic text-lg leading-relaxed border-l-2 border-blue-500/30 pl-6 text-left">
+                "An intelligent legal research assistant powered by Claude Opus 4.5 that helps lawyers, judges, and
+                legal professionals quickly search and analyze commercial court cases."
             </p>
         </section>
 
@@ -59,40 +117,52 @@
             <div class="glass p-10 rounded-[2.5rem] flex flex-col justify-center border-l-4 border-blue-600">
                 <h2 class="text-3xl font-extrabold mb-6">Problem Statement</h2>
                 <p class="text-slate-400 leading-relaxed text-justify">
-                    India currently battles a backlog of over <b class="text-white">50 Million</b> pending cases. Legal professionals spend ~40% of their time manually searching through judgments. Traditional keyword search misses semantic context, leading to inefficiency and overlooked precedents.
+                    India currently battles a backlog of over <b class="text-white">50 Million</b> pending cases. Legal
+                    professionals spend ~40% of their time manually searching through judgments. Traditional keyword
+                    search misses semantic context, leading to inefficiency and overlooked precedents.
                 </p>
             </div>
             <div class="space-y-6">
                 <div class="glass p-7 rounded-3xl border-r-4 border-blue-500/50">
-                    <h3 class="text-blue-400 font-bold text-xs uppercase tracking-widest mb-2">Literature Review / Market Research</h3>
-                    <p class="text-sm text-slate-500 italic">Existing tools like Manupatra rely on keyword matching. Manual headnotes are slow to produce and often subjective.</p>
+                    <h3 class="text-blue-400 font-bold text-xs uppercase tracking-widest mb-2">Literature Review /
+                        Market Research</h3>
+                    <p class="text-sm text-slate-500 italic">Existing tools like Manupatra rely on keyword matching.
+                        Manual headnotes are slow to produce and often subjective.</p>
                 </div>
                 <div class="glass p-7 rounded-3xl border-r-4 border-purple-500/50">
-                    <h3 class="text-purple-400 font-bold text-xs uppercase tracking-widest mb-2">Why Our Model is Better</h3>
+                    <h3 class="text-purple-400 font-bold text-xs uppercase tracking-widest mb-2">Why Our Model is Better
+                    </h3>
                     <ul class="text-[11px] text-slate-400 space-y-2 mt-2 leading-tight">
-                        <li><b class="text-purple-300">1. Contextual Understanding:</b> Resolves legal polysemy where keyword search fails.</li>
-                        <li><b class="text-purple-300">2. Citation Integrity:</b> Enforces strict page-level sourcing to eliminate hallucinations.</li>
-                        <li><b class="text-purple-300">3. Zero-Setup Scalability:</b> Auto-indexing pipeline for instant integration of new judgments.</li>
+                        <li><b class="text-purple-300">1. Contextual Understanding:</b> Resolves legal polysemy where
+                            keyword search fails.</li>
+                        <li><b class="text-purple-300">2. Citation Integrity:</b> Enforces strict page-level sourcing to
+                            eliminate hallucinations.</li>
+                        <li><b class="text-purple-300">3. Zero-Setup Scalability:</b> Auto-indexing pipeline for instant
+                            integration of new judgments.</li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <section id="methodology" class="space-y-12">
-            <h2 class="text-4xl font-black text-center uppercase tracking-tight">System <span class="text-blue-500">Methodology</span></h2>
+            <h2 class="text-4xl font-black text-center uppercase tracking-tight">System <span
+                    class="text-blue-500">Methodology</span></h2>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="glass p-8 rounded-3xl text-center">
                     <i class="fas fa-database text-blue-500 text-3xl mb-4"></i>
                     <h3 class="font-bold mb-2 uppercase text-xs tracking-widest">Dataset / Input</h3>
-                    <p class="text-sm text-slate-500 mb-2">[Commercial Courts Act 2015, Arbitration Act 1996, Case Laws]</p>
-                    <p class="text-[10px] text-slate-600 font-mono">Preprocessing: Recursive Character Splitter (Chunk: 1000, Overlap: 200)</p>
+                    <p class="text-sm text-slate-500 mb-2">[Commercial Courts Act 2015, Arbitration Act 1996, Case Laws]
+                    </p>
+                    <p class="text-[10px] text-slate-600 font-mono">Preprocessing: Recursive Character Splitter (Chunk:
+                        1000, Overlap: 200)</p>
                 </div>
                 <div class="glass p-8 rounded-3xl text-center">
                     <i class="fas fa-microchip text-purple-500 text-3xl mb-4"></i>
                     <h3 class="font-bold mb-2 uppercase text-xs tracking-widest">Model / Architecture</h3>
                     <p class="text-sm text-slate-500 mb-2">[LangChain + FAISS (IndexFlatL2) + Claude Opus 4.5]</p>
-                    <p class="text-[10px] text-slate-600 font-mono mb-3">Embeddings: all-MiniLM-L6-v2 (384-d) | Search Complexity: O(log n)</p>
-                    
+                    <p class="text-[10px] text-slate-600 font-mono mb-3">Embeddings: all-MiniLM-L6-v2 (384-d) | Search
+                        Complexity: O(log n)</p>
+
                     <div class="text-left bg-slate-900/50 p-3 rounded-xl border border-slate-800">
                         <p class="text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-1">RAG Pipeline:</p>
                         <ol class="text-[9px] text-slate-500 list-decimal list-inside leading-tight space-y-0.5">
@@ -107,67 +177,89 @@
                 <div class="glass p-8 rounded-3xl text-center border-2 border-green-500/20 bg-green-500/5">
                     <i class="fab fa-python text-green-500 text-3xl mb-4"></i>
                     <h3 class="font-bold mb-4 uppercase text-xs tracking-widest text-green-400">Live Execution</h3>
-                    <a href="http://localhost:7861" target="_blank" class="px-6 py-2 bg-green-600 rounded-full text-[10px] font-black hover:bg-green-500 transition shadow-lg shadow-green-900/40">VIEW LIVE DEMO</a>
+                    <a href="http://localhost:7861" target="_blank"
+                        class="px-6 py-2 bg-green-600 rounded-full text-[10px] font-black hover:bg-green-500 transition shadow-lg shadow-green-900/40">VIEW
+                        LIVE DEMO</a>
                 </div>
             </div>
         </section>
 
         <section id="results" class="glass p-12 rounded-[3.5rem] border-t-4 border-blue-500">
-            <h2 class="text-3xl font-black mb-12 text-center uppercase tracking-tight">Results & <span class="text-blue-500">Analysis</span></h2>
+            <h2 class="text-3xl font-black mb-12 text-center uppercase tracking-tight">Results & <span
+                    class="text-blue-500">Analysis</span></h2>
             <div class="grid md:grid-cols-2 gap-16 items-center">
                 <div class="h-80"><canvas id="resultsChart"></canvas></div>
                 <div class="space-y-6">
-                    <div class="p-6 rounded-2xl bg-white/5 flex justify-between items-center border border-white/10 shadow-inner">
-                        <span class="text-slate-400 font-bold uppercase text-xs tracking-widest">Accuracy / Performance</span>
+                    <div
+                        class="p-6 rounded-2xl bg-white/5 flex justify-between items-center border border-white/10 shadow-inner">
+                        <span class="text-slate-400 font-bold uppercase text-xs tracking-widest">Accuracy /
+                            Performance</span>
                         <span class="text-blue-400 font-mono font-black text-3xl">95%</span>
                     </div>
-                    
+
                     <div class="grid grid-cols-2 gap-4">
                         <div class="p-4 rounded-xl bg-blue-500/10 border border-blue-500/20">
-                            <h4 class="text-blue-400 text-[10px] font-black uppercase tracking-widest mb-1">Retrieval Latency</h4>
-                            <p class="text-2xl font-bold text-white">< 500ms</p>
+                            <h4 class="text-blue-400 text-[10px] font-black uppercase tracking-widest mb-1">Retrieval
+                                Latency</h4>
+                            <p class="text-2xl font-bold text-white">
+                                < 500ms</p>
                         </div>
                         <div class="p-4 rounded-xl bg-purple-500/10 border border-purple-500/20">
-                            <h4 class="text-purple-400 text-[10px] font-black uppercase tracking-widest mb-1">Relevance Score</h4>
+                            <h4 class="text-purple-400 text-[10px] font-black uppercase tracking-widest mb-1">Relevance
+                                Score</h4>
                             <p class="text-2xl font-bold text-white">0.92</p>
                         </div>
                     </div>
-                    
+
                     <div class="mt-4 p-5 rounded-2xl bg-slate-900/80 border border-slate-700/50 shadow-lg">
-                        <h4 class="text-blue-400 text-[10px] font-black uppercase tracking-widest mb-3 border-b border-slate-800 pb-2">Testing Strategy & RAG Evaluation</h4>
+                        <h4
+                            class="text-blue-400 text-[10px] font-black uppercase tracking-widest mb-3 border-b border-slate-800 pb-2">
+                            Testing Strategy & RAG Evaluation</h4>
                         <div class="grid grid-cols-2 gap-y-2 text-[10px] text-slate-400">
-                            <p><span class="text-slate-500 font-bold">Framework:</span> <span class="text-slate-200">RAGAS (Python)</span></p>
-                            <p><span class="text-slate-500 font-bold">Faithfulness:</span> <span class="text-green-400">0.95 (High)</span></p>
-                            <p><span class="text-slate-500 font-bold">Stress Test:</span> <span class="text-slate-200">50 Concurrent Users</span></p>
-                            <p><span class="text-slate-500 font-bold">Human Eval:</span> <span class="text-slate-200">Legal Expert Verified</span></p>
+                            <p><span class="text-slate-500 font-bold">Framework:</span> <span
+                                    class="text-slate-200">RAGAS (Python)</span></p>
+                            <p><span class="text-slate-500 font-bold">Faithfulness:</span> <span
+                                    class="text-green-400">0.95 (High)</span></p>
+                            <p><span class="text-slate-500 font-bold">Stress Test:</span> <span
+                                    class="text-slate-200">50 Concurrent Users</span></p>
+                            <p><span class="text-slate-500 font-bold">Human Eval:</span> <span
+                                    class="text-slate-200">Legal Expert Verified</span></p>
                         </div>
                     </div>
 
-                        </div>
-                    </div>
-
-                    <p class="text-slate-500 text-sm italic text-justify leading-relaxed mt-4">
-                        Drastic reduction in research time (from hours to seconds). <b class="text-blue-400">90% Reduction</b> in billable research hours. High precision in retrieving relevant case laws.
-                    </p>
                 </div>
+            </div>
+
+            <p class="text-slate-500 text-sm italic text-justify leading-relaxed mt-4">
+                Drastic reduction in research time (from hours to seconds). <b class="text-blue-400">90% Reduction</b>
+                in billable research hours. High precision in retrieving relevant case laws.
+            </p>
+            </div>
             </div>
         </section>
 
         <section id="future" class="grid md:grid-cols-3 gap-6">
             <div class="col-span-3 text-center mb-8">
-                <h2 class="text-2xl font-black uppercase tracking-tight text-slate-700">Future <span class="text-slate-500">Scope</span></h2>
+                <h2 class="text-2xl font-black uppercase tracking-tight text-slate-700">Future <span
+                        class="text-slate-500">Scope</span></h2>
             </div>
             <div class="glass p-6 rounded-3xl border-t-2 border-orange-500">
-                <h3 class="text-orange-400 font-bold text-xs uppercase tracking-widest mb-2"><i class="fas fa-language mr-2"></i>Multilingual Support</h3>
-                <p class="text-[11px] text-slate-400 leading-relaxed">Integration with <b>Bhashini</b> AI to support vernacular legal queries in Hindi, Tamil, and Bengali.</p>
+                <h3 class="text-orange-400 font-bold text-xs uppercase tracking-widest mb-2"><i
+                        class="fas fa-language mr-2"></i>Multilingual Support</h3>
+                <p class="text-[11px] text-slate-400 leading-relaxed">Integration with <b>Bhashini</b> AI to support
+                    vernacular legal queries in Hindi, Tamil, and Bengali.</p>
             </div>
             <div class="glass p-6 rounded-3xl border-t-2 border-cyan-500">
-                <h3 class="text-cyan-400 font-bold text-xs uppercase tracking-widest mb-2"><i class="fas fa-microphone mr-2"></i>Voice Interface</h3>
-                <p class="text-[11px] text-slate-400 leading-relaxed">Audio-to-Text pipeline allow lawyers to dictacte queries on-the-go.</p>
+                <h3 class="text-cyan-400 font-bold text-xs uppercase tracking-widest mb-2"><i
+                        class="fas fa-microphone mr-2"></i>Voice Interface</h3>
+                <p class="text-[11px] text-slate-400 leading-relaxed">Audio-to-Text pipeline allow lawyers to dictacte
+                    queries on-the-go.</p>
             </div>
             <div class="glass p-6 rounded-3xl border-t-2 border-pink-500">
-                <h3 class="text-pink-400 font-bold text-xs uppercase tracking-widest mb-2"><i class="fas fa-satellite-dish mr-2"></i>Real-time Indexing</h3>
-                <p class="text-[11px] text-slate-400 leading-relaxed">Direct API pipe from eCourts to auto-index new judgments daily.</p>
+                <h3 class="text-pink-400 font-bold text-xs uppercase tracking-widest mb-2"><i
+                        class="fas fa-satellite-dish mr-2"></i>Real-time Indexing</h3>
+                <p class="text-[11px] text-slate-400 leading-relaxed">Direct API pipe from eCourts to auto-index new
+                    judgments daily.</p>
             </div>
         </section>
 
@@ -176,12 +268,12 @@
             <div class="flex flex-wrap justify-center gap-10">
                 <div class="glass px-12 py-8 rounded-[2rem] border-b-4 border-blue-600">
                     <p class="text-[9px] font-bold text-blue-500 mb-2 uppercase tracking-widest">Project Guide</p>
-                    <p class="font-black text-xl text-slate-100">Babita Tiwari</p>
+                    <p class="font-black text-xl text-slate-100">Dr. Shishir Singh Chauhan</p>
                 </div>
                 <div class="glass px-12 py-8 rounded-[2rem] border-b-4 border-slate-700">
                     <p class="text-[9px] font-bold text-slate-400 mb-2 uppercase tracking-widest">Team Member 1</p>
-                    <p class="font-black text-xl text-slate-100">Rohit Ganguly</p>
-                    <p class="text-[10px] text-slate-500 mt-1">23FE10CSE00422</p>
+                    <p class="font-black text-xl text-slate-100">Shreyas Kumar Singh</p>
+                    <p class="text-[10px] text-slate-500 mt-1">2427030027</p>
                 </div>
             </div>
         </section>
@@ -189,7 +281,8 @@
 
     <footer class="py-12 text-center bg-black/40 border-t border-slate-900">
         <p class="text-slate-600 text-[10px] font-bold tracking-[0.3em] uppercase mb-2">Manipal University Jaipur</p>
-        <p class="text-slate-500 text-[9px] font-medium tracking-[0.2em] uppercase opacity-50">Department of Computer Science & Engineering • 2026</p>
+        <p class="text-slate-500 text-[9px] font-medium tracking-[0.2em] uppercase opacity-50">Department of Computer
+            Science & Engineering • 2026</p>
     </footer>
 
     <script>
@@ -202,7 +295,7 @@
                 let m = Math.floor(sec / 60);
                 let s = sec % 60;
                 document.getElementById('displayTime').innerText = `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
-                
+
                 if (sec >= 480 && sec < 600) { // 8-10 Mins Warning
                     document.getElementById('timerContainer').classList.add('timer-warning');
                     document.getElementById('timerIcon').classList.replace('fa-hourglass-start', 'fa-hourglass-half');
@@ -232,7 +325,7 @@
                 responsive: true,
                 maintainAspectRatio: false,
                 plugins: { legend: { display: false } },
-                scales: { 
+                scales: {
                     y: { beginAtZero: true, grid: { color: '#ffffff05' }, ticks: { color: '#475569' } },
                     x: { grid: { display: false }, ticks: { color: '#475569' } }
                 }
@@ -240,4 +333,5 @@
         });
     </script>
 </body>
+
 </html>
